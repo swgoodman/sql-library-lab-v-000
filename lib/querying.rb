@@ -13,7 +13,7 @@ end
 
 def select_name_and_series_subgenres_of_authors
   "SELECT authors.name, sub_genres.name
-  FROM series JOIN authors
+  FROM series JOIN authors JOIN sub_genres
   ON authors.id = series.author_id
   GROUP BY author_id;"
 end
